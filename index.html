@@ -7,7 +7,45 @@
 </head>
 <body>
     
-    <h1>eooo eo</h1>
+    <main>
+        <h1>Hola esta es mi aplicación</h1>
+        <p id="myP">hola mundo</p>
+        <button onclick="colorSwitch()">botón cool</button>
+
+    </main>
 
 </body>
+
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2.5cm auto;
+
+        & > p{
+            padding: 1rem 2rem;
+            border-radius: 5px;
+        }
+
+        & > button{
+            padding: 1rem;
+        }
+    }
+</style>
+
+<script>
+    let p = document.getElementById('myP')
+
+    let colors = ['aliceblue', 'aquamarine', 'beige', 'aqua', 'pink']
+
+    function colorSwitch(){
+        let ran = Math.floor(Math.random() * colors.length)
+        p.style.backgroundColor = colors[ran]
+    }
+</script>
+
 </html>
